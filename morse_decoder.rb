@@ -1,30 +1,30 @@
 MORSE = {
-  '.-' => 'a',
-  '-...' => 'b',
-  '-.-.' => 'c',
-  '-..' => 'd',
-  '.' => 'e',
-  '..-.' => 'f',
-  '--.' => 'g',
-  '....' => 'h',
-  '..' => 'i',
-  '.---' => 'j',
-  '-.-' => 'k',
-  '.-..' => 'l',
-  '--' => 'm',
-  '-.' => 'n',
-  '---' => 'o',
-  '.--.' => 'p',
-  '--.-' => 'q',
-  '.-.' => 'r',
-  '...' => 's',
-  '-' => 't',
-  '..-' => 'u',
-  '...-' => 'v',
-  '.--' => 'w',
-  '-..-' => 'x',
-  '-.--' => 'y',
-  '--..' => 'z',
+  '.-' => 'A',
+  '-...' => 'B',
+  '-.-.' => 'C',
+  '-..' => 'D',
+  '.' => 'E',
+  '..-.' => 'F',
+  '--.' => 'G',
+  '....' => 'H',
+  '..' => 'I',
+  '.---' => 'J',
+  '-.-' => 'K',
+  '.-..' => 'L',
+  '--' => 'M',
+  '-.' => 'N',
+  '---' => 'O',
+  '.--.' => 'P',
+  '--.-' => 'Q',
+  '.-.' => 'R',
+  '...' => 'S',
+  '-' => 'T',
+  '..-' => 'U',
+  '...-' => 'V',
+  '.--' => 'W',
+  '-..-' => 'X',
+  '-.--' => 'Y',
+  '--..' => 'Z',
   '.----' => '1',
   '..---' => '2',
   '...--' => '3',
@@ -38,17 +38,50 @@ MORSE = {
 }
 
 def decode_char(one)
-  puts MORSE[one]
+  MORSE[one]
 end
 
-def decode_word(more_letters)
-   words = ''
-   more_letters.split.each do |letter|
-    words += decode_char(letter)
-   end
+def decode_word(morse_letters)
+	word = ""
+	morse_letters.split.each do |letter|
+		word += decode_char(letter)
+	end
+	word
 end
 
+def morse_phrase_spliter(morse_phrase)
+	morse_phrase.split('   ')
+end
+
+def decode(morse_phrase)
+	decoded = ""
+	morse_phrase_spliter(morse_phrase).each do |morse_word|
+		if  decoded != ""
+			decoded += " "
+		end
+
+		decoded += decode_word(morse_word)
+	end
+
+	decoded
+end
+
+def pritty_print_morse_decoder(morse_phrase)
+	puts "morse_phrase: '" + morse_phrase+ "'"
+	puts "decode: '" + decode(morse_phrase) + "'"
+	puts ""
+end
+
+a_morse = ".-"
+my_morse = "-- -.--"
+my_name_morse = "-- -.--   -. .- -- ."
+secrete_morse = "      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
 
 
-decode_char(".-")
-puts decode_word("-- -.--")
+puts "morse_letter: '" + a_morse+ "'"
+puts "decode: '" + decode_char(a_morse) + "'"
+puts ""
+
+pritty_print_morse_decoder(my_morse)
+pritty_print_morse_decoder(my_name_morse)
+pritty_print_morse_decoder(secrete_morse)
