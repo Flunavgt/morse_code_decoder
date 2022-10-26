@@ -76,7 +76,7 @@ my_name_morse = '-- -.--   -. .- -- .'
 secrete_morse = '      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 
 puts "'morse_letter: '#{a_morse}' "
-puts "'decode: '#{decode_char(morse_phrase)}' "
+puts "'decode: '#{decode_char(a_morse)}' "
 puts ''
 
 pritty_print_morse_decoder(my_morse)
