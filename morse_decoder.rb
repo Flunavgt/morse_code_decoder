@@ -35,52 +35,49 @@ MORSE = {
   '---..' => '8',
   '----.' => '9',
   '-----' => '0'
-}
+}.freeze
 
 def decode_char(one)
   MORSE[one]
 end
 
 def decode_word(morse_letters)
-	word = ""
-	morse_letters.split.each do |letter|
-		word += decode_char(letter)
-	end
-	word
+  word = ''
+  morse_letters.split.each do |letter|
+    word += decode_char(letter)
+  end
+  word
 end
 
 def morse_phrase_spliter(morse_phrase)
-	morse_phrase.split('   ')
+  morse_phrase.split('   ')
 end
 
 def decode(morse_phrase)
-	decoded = ""
-	morse_phrase_spliter(morse_phrase).each do |morse_word|
-		if  decoded != ""
-			decoded += " "
-		end
+  decoded = ''
+  morse_phrase_spliter(morse_phrase).each do |morse_word|
+    decoded += ' ' if decoded != ''
 
-		decoded += decode_word(morse_word)
-	end
+    decoded += decode_word(morse_word)
+  end
 
-	decoded
+  decoded
 end
 
 def pritty_print_morse_decoder(morse_phrase)
-	puts "morse_phrase: '" + morse_phrase+ "'"
-	puts "decode: '" + decode(morse_phrase) + "'"
-	puts ""
+  puts "'morse_phrase: '#{morse_phrase}' "
+  puts "'decode: '#{decode(morse_phrase)}' "
+  puts ''
 end
 
-a_morse = ".-"
-my_morse = "-- -.--"
-my_name_morse = "-- -.--   -. .- -- ."
-secrete_morse = "      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+a_morse = '.-'
+my_morse = '-- -.--'
+my_name_morse = '-- -.--   -. .- -- .'
+secrete_morse = '      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 
-
-puts "morse_letter: '" + a_morse+ "'"
-puts "decode: '" + decode_char(a_morse) + "'"
-puts ""
+puts "'morse_letter: '#{a_morse}' "
+puts "'decode: '#{decode_char(morse_phrase)}' "
+puts ''
 
 pritty_print_morse_decoder(my_morse)
 pritty_print_morse_decoder(my_name_morse)
