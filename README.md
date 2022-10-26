@@ -1,15 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Morse Code Decoder
 
-> Description the project.
+> This app will decode any morse code with a Ruby script
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+
 
 ## Live Demo (if available)
 
@@ -40,17 +39,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Federico Luna**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Flunavgt](https://github.com/Flunavgt)
+- Twitter: [@flunavgt](https://twitter.com/flunavgt)
+- LinkedIn: [federico-luna-Gt](https://linkedin.com/in/federico-luna-Gt)
 
-👤 **Author2**
+👤 **Carlos Vivas**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@carlosmuerto](https://github.com/carlosmuerto)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-antonio-vivas-nieto/)
+
 
 ## 🤝 Contributing
 
